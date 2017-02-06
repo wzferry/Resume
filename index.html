@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>个人简历</title>
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+</head>
+<body>
+
+
+<div class="main" id="main">
+    <div id="music">
+        <audio id="audioFir"  src="Unique.mp3" preload="none"  loop/>
+    </div>
+    <ul>
+        <li class="page1">
+
+            <img class="icon" src="imgs/DSC_3842.jpg" alt="">
+            <img class="round move" src="imgs/p1_round.png" alt="">
+            <img class="round1 move1" src="imgs/p1_round1.png" alt="">
+            <div class="strip animated bounceInRight" ></div>
+            <p class="job animated rubberBand">Web Developer</p>
+            <p class="declaration">Your Dream To Life</p>
+            <div class="read">
+                <img class="search" src="imgs/p1_block.png" alt="">
+                <p>Read More</p>
+                <img class="arrow1" src="imgs/p1_tri.png" alt="">
+                <img class="arrow2" src="imgs/p1_tri.png" alt="">
+            </div>
+
+
+        </li>
+        <li class="page2">
+            <p class="animated flip">Directory</p>
+            <img class="img1" src="imgs/p2_ball.png" alt="">
+            <img class="img2" src="imgs/p2_ball.png" alt="">
+            <div class="info">
+                <img src="imgs/p2_one.png" alt="">
+                <p>个人信息</p>
+            </div>
+            <div class="skill">
+                <img src="imgs/p2_two.png" alt="">
+                <p>专业技能</p>
+            </div>
+            <div class="connection">
+                <img src="imgs/p2_three.png" alt="">
+                <p>联系方式</p>
+            </div>
+        </li>
+        <li class="page3">
+            <div class="about">
+                <img class="aboutBack" src="imgs/about01.gif" alt="">
+                <div class="personalInfo">
+                    <img class="speak" src="imgs/p3_speak.png" alt="">
+                    <p class="p1 animated bounceInLeft">var obj={</p>
+                    <p class="p2 animated bounceInRight">name:"王铸",</p>
+                    <p class="p3 animated bounceInLeft">education:"本科",</p>
+                    <p class="p4 animated bounceInRight">experience:"1年",</p>
+                    <p class="p5 animated bounceInLeft">address:"北京"</p>
+                    <p class="p6 animated bounceInRight">}</p>
+                    <img class="sign" src="imgs/6gewcw.gif" alt="">
+                </div>
+            </div>
+        </li>
+        <li class="page4">
+            <img class="p4Img0" src="imgs/zhuan003.png" alt="">
+            <p class="p4Skill">skill</p>
+            <div class="summarize">
+                <img class="p4Img5" src="imgs/U945.png" alt="">
+                <p class="animated bounceInUp">JS</p>
+                <img class="p4Img1 animated bounceInRight" src="imgs/c1.png" alt="">
+                <img class="p4Img2 animated bounceInDown" src="imgs/c2.png" alt="">
+                <img class="p4Img3 animated bounceInLeft" src="imgs/c6.png" alt="">
+                <img class="p4Img4" src="imgs/p4_right.png" alt="">
+            </div>
+        </li>
+        <li class="page5">
+            <img class="show" src="imgs/end683.png" alt="">
+            <p class="word animated bounceInLeft">I'm waiting for you</p>
+            <div class="phone">
+                <img class="animated bounceInLeft" src="imgs/p6_phone.png" alt="">
+                <p class="animated bounceInRight">15056995949</p>
+            </div>
+            <div class="qq">
+                <img class="animated bounceInLeft" src="imgs/p6_qq.png" alt="">
+                <p class="animated bounceInRight">342004038</p>
+            </div>
+            <div class="email">
+                <img class="animated bounceInLeft" src="imgs/p6_mail.png" alt="">
+                <p class="animated bounceInRight">342004038@qq.com</p>
+            </div>
+        </li>
+    </ul>
+    <img class="slide" src="imgs/arr.png" alt="">
+</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/index.js" charset="utf-8"></script>
+<script type="text/javascript">
+    ~function(){
+        var desw=640;
+        var devw=document.documentElement.clientWidth||document.body.clientWidth;
+        if(devw>desw){
+            document.getElementById("main").style.width=desw+'px';
+        }else{
+            document.documentElement.style.fontSize=devw/desw*100+'px';
+        }
+    }();
+    ~function(){
+        var music = document.getElementById("music"), audioFir = document.getElementById("audioFir");
+        window.setTimeout(function () {
+            audioFir.play();
+            audioFir.addEventListener("canplay", function () {
+                music.style.display = "block";
+                music.className = "music musicMove";
+            }, false);
+        }, 500);
+        music.addEventListener("click",function(){
+            if(audioFir.paused){
+                audioFir.play();
+                music.className="music musicMove";
+                return;
+            }
+            audioFir.pause();
+            music.className="music";
+        },false);
+    }()
+</script>
+</html>
